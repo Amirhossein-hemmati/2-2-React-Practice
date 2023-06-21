@@ -1,20 +1,25 @@
 import ColorfulBox from "./components/ColorfulBox.jsx";
 import Selector from "./components/Selector.jsx";
 import "./App.css"
-
-// import {useState} from "react";
+import {useState} from "react";
 
 
 function App() {
-    // const [color,setColor] = useState('');
+    const [color,setColor] = useState("0");
 
-    // setColor()
+
+    const changeHandler = (e) => {
+        setColor (e.target.value)
+        }
 
 
     return (
         <div className={'colorful_items'}>
-            <Selector/>
-            <ColorfulBox/>
+            <Selector
+                change = {changeHandler}
+                color={color}
+            />
+            <ColorfulBox color = {color}/>
         </div>
     )
 }

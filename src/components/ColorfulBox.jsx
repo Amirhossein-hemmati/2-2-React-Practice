@@ -1,9 +1,10 @@
-import ColorfulBox from './ColorfulBox.css'
-import Selector from "./Selector.jsx";
+import './ColorfulBox.css'
 
-const box = () => {
+const box = ({color}) => {
     return (
-        <div className={'colorful_items_box'}></div>
+        <div className={'colorful_items_box'}
+             style={{background: color}}>
+        </div>
     )
 }
 
