@@ -5,7 +5,7 @@ import {useState} from "react";
 
 
 function App() {
-    const [color,setColor] = useState("0");
+    const [color,setColor] = useState("");
 
 
     const changeHandler = (e) => {
